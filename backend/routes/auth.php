@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../controllers/AuthController.php';
+require_once __DIR__ . '/../controllers/authController.php';
 
 function registerAuthRoutes($router) {
     $router->add('POST', '/register', function() {
