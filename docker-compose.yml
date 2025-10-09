@@ -1,20 +1,22 @@
 version: '3.8'
+
 services:
-  back:
-    build: ./backend
-    container_name: back
+  app:
+    build: .
+    container_name: camagru_app
     env_file:
       - .env
     ports:
       - "8080:80"
     volumes:
-      - ./backend:/var/www/html
+      - .:/var/www/html
     depends_on:
       - db
     restart: always
 
   db:
     image: mysql:8
+    container_name: camagru_db
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
@@ -22,12 +24,9 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3306:3306"
-
-  front:
-    build: ./frontend
-    container_name: front
-    ports:
-      - "3000:80"
-    depends_on:
-      - back
+    volumes:
+      - camagru_data:/var/lib/mysql
     restart: always
+
+volumes:
+  camagru_data:
