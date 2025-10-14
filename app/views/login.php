@@ -10,21 +10,17 @@
     <div class="sm:min-h-screen flex flex-col items-center justify-center">
   
       <div class="sm:px-10 sm:py-14 sm:bg-[--color-white] sm:rounded-lg sm:border-2 sm:border-[--color-lightwhite]">
-        <div class=" mb-12 sm:mb-24 mt-12">
-          <h2 class="sm:hidden text-center text-2xl">Sign up</h2>
-          <h2 class="hidden sm:block text-center text-2xl">Welcome to Camagru</h2>
-          <h3 class="hidden sm:block text-center text-sm">Begin by creating an account</h3>
-        </div>
+          <div class="mb-12 sm:mb-24 mt-12">
+            <h2 class="text-center text-2xl">Log In</h2>
+            <button class="text-sm flex justify-self-center">
+              or&nbsp<span class="underline">create an account</span>
+            </button>
+          </div>
   
         <form class="space-y-2 sm:mt-12 w-96 sm:mb-12">
           <div class="floating-label">
             <input type="text" name="username" required class="peer rounded-3xl p-3" />
             <label>Username</label>
-          </div>
-  
-          <div class="floating-label">
-            <input type="email" name="email" required class="peer rounded-3xl p-3" />
-            <label>Email</label>
           </div>
   
           <div class="floating-label relative">
@@ -42,8 +38,9 @@
         </form>
   
         <button class="mt-12 rounded-3xl bg-orange-400 hover:bg-orange-500 w-full p-3">
-          Continue
+          Enter
         </button>
+        <button class="hover:underline text-sm flex justify-self-center mt-3">Forgot password ?</button>
       </div>
     </div>
 </div>

@@ -5,10 +5,10 @@
 .floating-label input {
   width: 100%;
   padding: 15px 20px;
-  padding-top: 25px;
-  background: #e7e7e6;
+  padding-top: 20px;
+  background: #f3f3f3;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #d8d7d7;
   color: black;
   outline: none;
   font-size: 14px;
@@ -16,7 +16,7 @@
 
 .floating-label label {
   position: absolute;
-  top: 10.5px;
+  top: 7px;
   left: 20px;
   padding: 10px 0;
   color: black;
@@ -27,7 +27,7 @@
 
 .floating-label input:focus ~ label,
 .floating-label input:valid ~ label {
-  top: 3px;
+  top: -2px;
   font-size: 10px;
   color: black;
 }
