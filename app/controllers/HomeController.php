@@ -2,6 +2,6 @@
 
 class HomeController extends Controller {
     public function index() {
-        $this->render('home', ['title' => 'Bienvenue sur Camagru']);
+        $this->render('signup', ['title' => 'Bienvenue sur Camagru']);
     }
 }

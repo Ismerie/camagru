@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+	--color-white: #eeebe6;
+	--color-lightwhite: #f8f6f59f;
+	--color-black:  #432818;
+}
+
+.space-grotesk {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: large;
+}

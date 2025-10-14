@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Camagru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/style/App.css">
+    <link rel="stylesheet" href="public/style/AnimationForm.css">
+    <!-- <link rel="stylesheet" href="public/style/Background.css"> -->
+</head>
+<body class="bg-[--color-white]">
+    <div>
+      <button class="hidden sm:absolute sm:block text-lg z-10 left-5 top-5 ">
+        <p>Camagru</p>
+      </button>
+      <button class="sm:hidden absolute text-lg z-10 left-5 top-5 ">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 4L7 12L15 20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </button>
+        <div class="min-h-screen flex flex-col items-center justify-center">
+      
+          <div class="px-10 py-14 bg-[--color-lightwhite] rounded-lg border-2 border-[#f4f4f2]">
+            <div class="mb-24 mt-12">
+                <h2 class="text-center text-2xl">Welcome to Camagru</h2>
+                <h3 class="text-center text-sm">Begin by creating an account</h3>
+            </div>
+      
+            <form class="space-y-2 mt-12 w-96 mb-12">
+              <div class="floating-label">
+                <input type="text" name="username" required class="peer rounded-3xl p-3" />
+                <label>Username</label>
+              </div>
+      
+              <div class="floating-label">
+                <input type="email" name="email" required class="peer rounded-3xl p-3" />
+                <label>Email</label>
+              </div>
+      
+              <div class="floating-label">
+                <input type="password" name="password" required class="peer rounded-3xl p-3" />
+                <label>Password</label>
+              </div>
+            </form>
+      
+            <button class="mt-12 rounded-3xl bg-orange-400 hover:bg-orange-500 w-full p-3">
+              Continue
+            </button>
+          </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+</footer>
+</html>
