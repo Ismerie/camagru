@@ -1,19 +1,20 @@
 <div>
-  <button class="hidden sm:absolute sm:block text-lg z-10 left-5 top-5 ">
+  <button class="hidden sm:absolute sm:block text-lg left-5 top-5 ">
     <p>Camagru</p>
   </button>
-  <button class="sm:hidden absolute text-lg z-10 left-5 top-5 ">
-    <svg 
-    class="w-6 h-6" 
-    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 4L7 12L15 20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+  <button class="sm:hidden absolute text-lg left-5 top-5 ">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 4L7 12L15 20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
   </button>
-    <div class="sm:min-h-screen flex flex-col items-center justify-center">
-  
-      <div class="sm:px-10 sm:py-14 sm:bg-[--color-white] sm:rounded-lg sm:border-2 sm:border-[--color-lightwhite]">
-        <div class=" mb-12 sm:mb-24 mt-12">
-          <h2 class="sm:hidden text-center text-2xl">Sign up</h2>
-          <h2 class="hidden sm:block text-center text-2xl">Welcome to Camagru</h2>
-          <h3 class="hidden sm:block text-center text-sm">Begin by creating an account</h3>
+  <div class="min-h-screen flex flex-col items-center justify-center">
+    <div class="relative z-10 px-10 py-14 bg-[--color-lightwhite] rounded-lg border-2 border-[#f4f4f2]">
+      <div class="mb-24 mt-12">
+          <h2 class="text-center text-2xl">Welcome to Camagru</h2>
+          <h3 class="text-center text-sm">Begin by creating an account</h3>
+      </div>
+      <form class="space-y-2 mt-12 w-96 mb-12">
+        <div class="floating-label">
+          <input type="text" name="username" required class="peer rounded-3xl p-3" />
+          <label>Username</label>
         </div>
   
         <form class="space-y-2 sm:mt-12 w-96 sm:mb-12">
