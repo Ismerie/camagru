@@ -1,0 +1,1 @@
+<section id="masonry" class="flex gap-4 w-full max-w-6xl px-4"></section>
