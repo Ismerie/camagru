@@ -11,15 +11,17 @@ class Router {
         // Routes HTML (MVC)
         // --------------------------
         $this->get('/', 'HomeController', 'index');
-        $this->get('login', 'AuthController', 'login');
-        $this->post('login', 'AuthController', 'handleLogin');
-        $this->get('register', 'AuthController', 'register');
-        $this->post('register', 'AuthController', 'handleRegister');
+        $this->get('login', 'AuthController', 'loginForm');
+        $this->get('signup', 'AuthController', 'signupForm');
         $this->get('profile', 'UserController', 'profile');
 
         // --------------------------
         // Routes API (AJAX)
         // --------------------------
+        $this->post('api/register', 'AuthController', 'register');
+        $this->post('api/login', 'AuthController', 'login');
+        $this->post('api/logout', 'AuthController', 'logout');
+
         $this->post('api/like', 'ApiController', 'like');
         $this->post('api/comment', 'ApiController', 'comment');
         $this->post('api/upload', 'ApiController', 'upload');

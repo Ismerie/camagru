@@ -1,8 +1,19 @@
 <?php
 
-require_once __DIR__ . '/../config/database.php'; //pdo
+require_once __DIR__ . '/../core/Database.php'; //pdo
 
-class AuthController {
+class AuthController extends Controller {
+    // --- VUES ---
+    public function loginForm() {
+        $this->render('login', ['title' => 'Login'], ['backgroundSquare.js', 'auth/login.js']);
+    }
+
+    public function signupForm() {
+        $this->render('signup', ['title' => 'Signup'], ['backgroundSquare.js', 'auth/signup.js']);
+    }
+
+
+    // --- API ---
     public static function register($data)
     {
         // 1️⃣ Validation de base
