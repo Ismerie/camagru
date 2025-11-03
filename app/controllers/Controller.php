@@ -14,7 +14,7 @@ class Controller {
         require_once APP . '/views/footer.php';
 
         foreach ($scripts as $script) {
-            echo '<script src="js/' . htmlspecialchars($script) . '" defer></script>';
+            echo '<script type="module" src="js/' . htmlspecialchars($script) . '" defer></script>';
         }
     }
 }
