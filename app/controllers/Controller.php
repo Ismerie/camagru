@@ -10,6 +10,7 @@ class Controller {
             require_once APP . '/views/backgroundSquare.php';
         }
 
+        require_once APP . '/views/toastContainer.php';
         require_once APP . '/views/' . $view . '.php';
         require_once APP . '/views/footer.php';
 

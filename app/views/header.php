@@ -10,5 +10,6 @@
     <link rel="stylesheet" href="style/App.css">
     <link rel="stylesheet" href="style/AnimationForm.css">
     <link rel="stylesheet" href="style/Background.css">
+    <link rel="stylesheet" href="style/Toast.css">
 </head>
 <body class="bg-[--color-white]">

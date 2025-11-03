@@ -1,27 +1,31 @@
 import UtilsCheck from '../utils/utils.js'
+import { showToast } from "../toast.js";
 
 function checkDataError(username, mail, password) {
-    let errorStr = "";
-
-    if (!UtilsCheck.isValidUsername(username)) {
-        errorStr = "Username must contains betwenn 3 and 10 characters"
-        console.log("error")
-        //return false;
+    const rules = [
+      {
+        valid: UtilsCheck.isValidUsername(username),
+        message: "Username must be 3–10 characters long.",
+      },
+      {
+        valid: UtilsCheck.isValidEmail(mail),
+        message: "Invalid email address",
+      },
+      {
+        valid: UtilsCheck.isValidPassword(password),
+        message: "Password must be at least 8 characters with a letter, number, and symbol",
+      },
+    ];
+  
+    const errors = rules.filter(rule => !rule.valid).map(rule => rule.message);
+  
+    if (errors.length > 0) {
+      errors.forEach(msg => showToast(msg, "error"));
+      return false;
     }
-    if (!UtilsCheck.isValidEmail(mail)) {
-        errorStr = "Mail invalide"
-        //return false;
-    }
-    if (!UtilsCheck.isValidPassword(password)) {
-        errorStr = "Password must contains minimum 8 characters, one letter, one number et one special character (!@#$%^&*()_\-+=)"
-        //return false;
-    }
-    if (errorStr != "") {
-        console.log(errorStr);
-        return false
-    }
-    return true
-}
+    return true;
+  }
+  
 
 function signupUser() {
     const username = UtilsCheck.sanitize(document.querySelector('input[name="username"]').value);
