@@ -53,7 +53,7 @@ class Router {
 
             if (str_starts_with($uri, 'api/')) {
                 header('Content-Type: application/json');
-                echo json_encode($controller->$action());
+                $controller->$action();
             } else {
                 $controller->$action();
             }

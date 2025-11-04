@@ -1,5 +1,6 @@
 import UtilsCheck from '../utils/utils.js'
 import { showToast } from "../toast.js";
+import { postRequest } from "../request/requests.js";
 
 function checkDataError(username, mail, password) {
     const rules = [
@@ -27,7 +28,7 @@ function checkDataError(username, mail, password) {
   }
   
 
-function signupUser() {
+async function signupUser() {
     const username = UtilsCheck.sanitize(document.querySelector('input[name="username"]').value);
     const mail = UtilsCheck.sanitize(document.querySelector('input[name="email"]').value);
     const password = UtilsCheck.sanitize(document.querySelector('input[name="password"]').value);
@@ -40,6 +41,9 @@ function signupUser() {
         return;
     }
     console.log("good data")
+    const data = await postRequest("api/register", { username, email: mail, password });
+
+  if (!data) return;
 
 }
 

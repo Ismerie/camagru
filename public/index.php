@@ -29,6 +29,9 @@ spl_autoload_register(function ($class) {
 
 // Charge le Router
 require_once APP . '/core/Router.php';
+require_once APP . '/core/Migration.php';
+
+Migration::run();
 
 // Exécute le routeur
 $router = new Router();
