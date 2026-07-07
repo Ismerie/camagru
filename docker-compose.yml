@@ -12,6 +12,15 @@ services:
       - .:/var/www/html
     depends_on:
       - db
+      - mail
+    restart: always
+
+  mail:
+    image: axllent/mailpit
+    container_name: camagru_mail
+    ports:
+      - "8025:8025" # UI web pour lire les emails envoyés
+      - "1025:1025" # port SMTP interne (utilisé par msmtp dans le conteneur app)
     restart: always
 
   db:

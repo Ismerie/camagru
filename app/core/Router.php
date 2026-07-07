@@ -13,6 +13,7 @@ class Router {
         $this->get('/', 'HomeController', 'index');
         $this->get('login', 'AuthController', 'loginForm');
         $this->get('signup', 'AuthController', 'signupForm');
+        $this->get('verify', 'AuthController', 'verify');
         $this->get('profile', 'UserController', 'profile');
 
         // --------------------------
