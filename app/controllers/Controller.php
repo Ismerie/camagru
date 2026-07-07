@@ -5,6 +5,13 @@ class Controller {
         extract($data);
         require_once APP . '/views/layout/header.php';
 
+        // TODO: ajouter 'gallery' et 'edit' ici une fois ces pages routées (TICKET-D4, TICKET-C1)
+        $viewsWithNavbar = ['home', 'profile'];
+        if (in_array($view, $viewsWithNavbar)) {
+            require_once APP . '/views/layout/navbar.php';
+            echo '<script type="module" src="js/navbar.js" defer></script>';
+        }
+
         $viewsWithBackground = ['home', 'signup', 'login'];
         if (in_array($view, $viewsWithBackground)) {
             require_once APP . '/views/partials/background-square.php';

@@ -1,4 +1,4 @@
-// 🖼️ Quelques images à afficher
+// Quelques images à afficher
 const images = [
   "https://images.unsplash.com/photo-1760440948623-9c5343a753a7?auto=format&fit=crop&w=800&q=80",
   "https://images.unsplash.com/photo-1760379682992-addb38e0f6c8?auto=format&fit=crop&w=800&q=80",
