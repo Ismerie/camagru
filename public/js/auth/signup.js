@@ -32,19 +32,17 @@ async function signupUser() {
     const username = UtilsCheck.sanitize(document.querySelector('input[name="username"]').value);
     const mail = UtilsCheck.sanitize(document.querySelector('input[name="email"]').value);
     const password = UtilsCheck.sanitize(document.querySelector('input[name="password"]').value);
-    
-    console.log("handle continue")
-    console.log(username, mail, password)
 
     if (!checkDataError(username, mail, password)) {
-        console.log("error data")
         return;
     }
-    console.log("good data")
+
     const data = await postRequest("api/register", { username, email: mail, password });
 
-  if (!data) return;
+    if (!data) return;
 
+    showToast("Account created successfully! Please check your email to confirm it.", "success");
+    window.location.href = "/login";
 }
 
 const togglePassword = document.getElementById("togglePassword");
@@ -53,7 +51,6 @@ const eye = document.getElementById("eye");
 const eyeOff = document.getElementById("eye-off");
 
 togglePassword.addEventListener("click", () => {
-    console.log("handle eye")
     const isVisible = passwordInput.type === "text";
 
     passwordInput.type = isVisible ? "password" : "text";
